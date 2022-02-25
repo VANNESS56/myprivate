@@ -1467,6 +1467,14 @@ menu = `┌──⭓ *𝙼𝙰𝙸𝙽 𝙼𝙴𝙽𝚄*
 SendButLoc(from, menu, jck, ofrply1, butkon1, {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 break   
 
+case 'addvip':
+  if (!isOwner && !mek.key.fromMe) return   reply(mess.only.ownerB)
+prmm = body.slice(8)
+prem.push(`${prmm}@s.whatsapp.net`)
+fs.writeFileSync('./database/premium.json', JSON.stringify(prem))
+reply(`*@${prmm}*\n_Berhasil Add User Premium ✓_`)
+break
+
 case 'vipmenu':
             stod = `${sender}`
             ty = '```'
